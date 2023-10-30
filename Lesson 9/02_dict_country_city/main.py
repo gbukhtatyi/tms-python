@@ -8,6 +8,9 @@ json_content = json.loads(raw_content)
 print('''Задание 2
 Создать словарь, где ключ — это код страны, а значение — количество городов.''')
 
-result = {info['country']: info['name'] for info in json_content}
+result = {}
+
+for city in json_content:
+    result[city['country']] = result.get(city['country'],0) + 1
 
 print('Словарь:', result)
