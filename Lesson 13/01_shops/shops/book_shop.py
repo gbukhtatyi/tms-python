@@ -1,5 +1,5 @@
-from .base import Product, RealShop, NonProductError
-
+from .base import Product, BaseShop
+from .exceptions import NonProductError
 
 class BookShopItem(Product):
     pass
@@ -13,7 +13,7 @@ class Journal(BookShopItem):
     pass
 
 
-class BookShop(RealShop):
+class BookShop(BaseShop):
     def _validate_product(self, product: BookShopItem):
         if not isinstance(product, BookShopItem):
             raise NonProductError("the product parameter must be instance of BookShopItem")

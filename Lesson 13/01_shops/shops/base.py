@@ -1,9 +1,6 @@
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-
-
-class NonProductError(Exception):
-    pass
+from .exceptions import NonProductError
 
 
 @dataclass
@@ -32,7 +29,7 @@ class AbstractShop(ABC):
         """
 
 
-class RealShop(AbstractShop):
+class BaseShop(AbstractShop):
     def __init__(self):
         self.products = []
         self.sells = {}

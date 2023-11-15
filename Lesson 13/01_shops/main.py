@@ -2,7 +2,7 @@ import shops
 
 # Test CoffeShop
 
-coffe_shop = shops.RealShop()
+coffe_shop = shops.CafeShop()
 pizza = shops.Pizza(1, "Пицца", 100, ['Пеперони', 'Сыр'], False, 30)
 cofee100 = shops.Coffee(2, "Кофе 100ml", 10, 100)
 

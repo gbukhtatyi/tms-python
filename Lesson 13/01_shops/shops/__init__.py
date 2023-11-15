@@ -1,8 +1,9 @@
 # Import Base Classes
-from .base import NonProductError, Product, AbstractShop, RealShop
+from .exceptions import NonProductError
+from .base import Product, AbstractShop, BaseShop
 
 # Import CoffeeShop
-from .cafe_shop import Pizza, Coffee
+from .cafe_shop import Pizza, Coffee, CafeShopItem, CafeShop
 
 # Import CoffeeShop
 from .furniture_shop import FurnitureShopItem, Table, Chair, Cupboard, FurnitureShop

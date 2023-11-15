@@ -1,4 +1,5 @@
-from .base import Product, RealShop, NonProductError
+from .base import Product, BaseShop
+from .exceptions import NonProductError
 
 
 class FurnitureShopItem(Product):
@@ -17,7 +18,7 @@ class Cupboard(FurnitureShopItem):
     pass
 
 
-class FurnitureShop(RealShop):
+class FurnitureShop(BaseShop):
     def _validate_product(self, product: FurnitureShopItem):
         if not isinstance(product, FurnitureShopItem):
             raise NonProductError("the product parameter must be instance of FurnitureShopItem")

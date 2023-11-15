@@ -1,4 +1,5 @@
-from .base import Product, RealShop, NonProductError
+from .base import Product, BaseShop
+from .exceptions import NonProductError
 
 
 class PcShopItem(Product):
@@ -17,7 +18,7 @@ class HardDisk(PcShopItem):
     pass
 
 
-class PcShop(RealShop):
+class PcShop(BaseShop):
     def _validate_product(self, product: PcShopItem):
         if not isinstance(product, PcShopItem):
             raise NonProductError("the product parameter must be instance of PcShopItem")
