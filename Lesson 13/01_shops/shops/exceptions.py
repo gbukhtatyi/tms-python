@@ -1,0 +1,2 @@
+class NonProductError(Exception):
+    pass
